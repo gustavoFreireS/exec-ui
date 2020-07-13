@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import '../assets/tailwind.css';
 
-interface IButtonProps {
+interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   variation?: Variations;
 }
@@ -10,9 +10,9 @@ interface IButtonProps {
 type Variations = 'primary' | 'secondary' | 'danger' | 'warning' | 'success';
 
 const setVariation = (variation?: Variations) => {
-  if (!variation) return 'bg-black';
+  if (!variation) return '-purple-700';
   const variations = {
-    primary: '-black',
+    primary: '-purple-700',
     secondary: '-gray-700',
     danger: '-red-700',
     success: '-green-700',
@@ -35,13 +35,8 @@ const StyledButton = styled.button.attrs((props: IButtonProps) => ({
               rounded`,
 }))``;
 
-const Button: React.FC<IButtonProps> & React.HTMLProps<HTMLButtonElement> = ({
-  children,
-  ...props
-}: IButtonProps) => (
-  <StyledButton type="button" {...props}>
-    {children}
-  </StyledButton>
+export const Button: React.FC<IButtonProps> = ({ children, ...props }: IButtonProps) => (
+  <StyledButton {...props}>{children}</StyledButton>
 );
 
 export default Button;

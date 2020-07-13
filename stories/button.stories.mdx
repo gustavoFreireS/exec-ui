@@ -1,0 +1,18 @@
+import { Meta, Story, Preview, Description, Props } from '@storybook/addon-docs/blocks';
+import Button from '../src/components/button';
+import './styles.css'
+
+<Meta title="Button" component={Button} />
+
+# Button
+
+<Preview withSource="open">
+  <Story name="all buttons">
+      <Button variation="primary">Hello</Button>
+      <Button variation="secondary">Hello</Button>
+      <Button variation="success">Hello</Button>
+      <Button variation="danger">Hello</Button>
+  </Story>
+</Preview>
+
+<Props of={Button} />

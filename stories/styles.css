@@ -1,0 +1,18 @@
+#story-root {
+  padding: 0 40px;
+  background-color: #fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.button-container > * {
+  margin-right: 20px;
+}
+#story--button--all-buttons > *  {
+  margin-right: 20px;
+}
+.css-miy3iu {
+  display: none;
+}

@@ -5,16 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@storybook/addon-actions": "^6.0.0-rc.3",
+    "@storybook/addon-docs": "^6.0.0-rc.3",
+    "@storybook/addon-info": "^5.3.19",
+    "@storybook/addon-links": "^6.0.0-rc.3",
+    "@storybook/addons": "^6.0.0-rc.3",
+    "@storybook/react": "^6.0.0-rc.3",
     "@types/react": "^16.9.42",
     "@types/react-dom": "^16.9.8",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
     "eslint-config-airbnb-typescript": "^8.0.2",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
@@ -24,7 +34,9 @@
     "postcss-cli": "^7.1.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^2.0.5",
+    "react-docgen-typescript-loader": "^3.7.2",
     "source-map-loader": "^1.0.1",
+    "storybook-dark-mode": "^0.6.2-canary.71.2195.0",
     "stylelint-config-recommended": "^3.0.0",
     "tailwindcss": "^1.4.6",
     "ts-loader": "^8.0.0",
@@ -34,6 +46,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@types/storybook__addon-info": "^5.2.1",
     "@types/styled-components": "^5.1.1",
     "@typescript-eslint/parser": "^3.6.0",
     "eslint": "^7.4.0",
